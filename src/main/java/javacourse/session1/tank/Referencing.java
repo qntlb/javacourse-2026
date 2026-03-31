@@ -41,5 +41,10 @@ public class Referencing {
 		
 		//this is true
 		System.out.println("Is the level of tank3 equal to the level of tank2 ? " + (tank3.level == tank2.level));
+		
+		// Aliasing does not occur with primitive data types:
+		System.out.println();
+		tank3.level += 1;
+		System.out.println("4: tank3.level: " + tank3.level + ", tank2.level: " + tank2.level);
 	}
 }
