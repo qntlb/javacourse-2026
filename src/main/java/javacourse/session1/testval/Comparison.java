@@ -47,7 +47,7 @@ public class Comparison {
 	 */
 	// TODO: implement compactIsInside without using if/else, using the "!" operator
 	boolean compactIsInside(double testedNumber, double leftEnd, double rightEnd) {
-		return false;
+		return !(testedNumber < leftEnd || testedNumber > rightEnd);
 	}
 
 	/**
@@ -70,4 +70,7 @@ public class Comparison {
 	}
 	
 	// TODO: write a one-line method isInsideWithTernary which uses a ternary operator to return a boolean
+	boolean isInsideWithTernary(double testedNumber, double lefEnd, double rightEnd) {
+		return (testedNumber >= lefEnd & testedNumber <= rightEnd) ? true : false;
+	}
 }

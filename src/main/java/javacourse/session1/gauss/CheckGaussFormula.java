@@ -10,7 +10,7 @@ public class CheckGaussFormula {
 
 		SumOfIntegers sumOfIntegers = new SumOfIntegers(); // new object of type SumOfIntegers
 
-		int lastNumber = 29;
+		int lastNumber = 27;
 		
 		int directSum = sumOfIntegers.sumUpToNumber(lastNumber); // call of the method
 		

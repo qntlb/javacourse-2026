@@ -16,6 +16,9 @@ public class SumOfIntegers {
 	int sumUpToNumber(int lastNumber) {
 		int sum = 0;
 		// TODO: implement the method. Hint: to increase sum by a number you can use sum = sum + number or sum += number.
+		for (int i = 1; i <= lastNumber; i++) {
+			sum += i;
+		}
 		return sum;
 	}
 	
