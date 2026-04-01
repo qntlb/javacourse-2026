@@ -14,8 +14,24 @@ public class MessageWithOverloading {
 	String messageToBePrinted = "Default hello message";
 
 	// TODO: write the default constructor and the constructor with argument as in the Javadoc of the class
+	MessageWithOverloading() {
+		// Side effect
+		System.out.println("A new default message is created.");
+	}
+	
+	MessageWithOverloading(String message) {
+		System.out.println("A new personalized message is created.");
+		messageToBePrinted = message;
+	}
 
 
 
 	// TODO: write the method printMessage() and the overloaded method with argument as in the Javadoc of the class.
+	void printMessage() {
+		System.out.println(messageToBePrinted);
+	}
+	
+	void printMessage(String message) {
+		System.out.println(message);
+	}
 }

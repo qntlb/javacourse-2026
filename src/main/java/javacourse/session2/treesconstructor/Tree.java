@@ -26,6 +26,7 @@ public class Tree {
 	 * Tree(double heightOfTheNewTree) overloads this constructor.
 	 */
 	Tree() {
+		System.out.println("A new tree is planted");
 	}
 	/*
 	 * Since we implemented a constructor with an argument, if we don't define a default constructor

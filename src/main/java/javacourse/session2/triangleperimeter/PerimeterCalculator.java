@@ -18,7 +18,10 @@ public class PerimeterCalculator {
 	 * length
 	 */
 	// TODO: write the method computePerimeter in the case where three arguments of type double are passed
-
+	double computePerimeter(double firstSideLength, double secondSideLength, double thirdSideLength) {
+		return firstSideLength + secondSideLength + thirdSideLength;
+	}
+	
 	/*
 	 * isosceles triangle: you see that it would not make sense to call this method
 	 * in another way: it does compute a perimeter
@@ -27,8 +30,16 @@ public class PerimeterCalculator {
 		double perimeter = equalSidesLength * 2 + differentSideLength;
 		return perimeter;
 	}
+	
+	// Note: the return type is not part of the signature of the method
+//	int computePerimeter(double equalSidesLength, double differentSideLength) {
+//		double perimeter = equalSidesLength * 2 + differentSideLength;
+//		return (int) perimeter;
+//	}
 
 	// equilateral triangle
 	// TODO: write the overloading method where only one side is passed, which implicitly means that the triangle is equilateral.
-
+	double computePerimeter(double sidesLength) {
+		return sidesLength * 3;
+	}
 }
