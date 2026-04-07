@@ -25,9 +25,7 @@ public class StaticTest {
 		firstObject.nonStaticField = 2;
 
 		firstObject.printFields();
-		
 		secondObject.printFields();
-
 		System.out.println("\n");
 
 		StaticExample.staticModifier();// the value of the static field is incremented by 1
@@ -38,7 +36,6 @@ public class StaticTest {
 		 */
 		firstObject.printFields();
 		secondObject.printFields();
-
 		System.out.println("\n");
 
 		/*
@@ -48,12 +45,12 @@ public class StaticTest {
 		 */
 		StaticExample thirdObject = new StaticExample();
 		thirdObject.printFields();
+		System.out.println("\n");
 
 		/*
 		 * You can also modify static fields, or call methods from direct object calls,
 		 * but this is bad practice
 		 */
-		System.out.println("\n");
 		
 		firstObject.staticField = 10;//bad practice
 		
