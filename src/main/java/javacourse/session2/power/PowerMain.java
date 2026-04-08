@@ -11,7 +11,9 @@ public class PowerMain {
 		double base = - 3.2; // negative number!
 		int intExponent = 2;
 		double doubleExponent = 2.5;
+		double secondIntegerExponent = 2;
 		powerCalculator.computePower(base, intExponent); // everything is fine: the arguments are double, int
 		powerCalculator.computePower(base, doubleExponent); // the arguments are now double, double: the result can be a complex number
+		powerCalculator.computePower(base, secondIntegerExponent);
 	}
 }

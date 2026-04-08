@@ -23,4 +23,25 @@ public class Mortgage {
 	 * the total amount loaned is below the budget. For the constructor you can look at
 	 * javacourse.session2.mortgages.Mortgage
 	 */
+	private Mortgage(String name, int age, double amount) {
+		this.name = name; // note the use of this
+		this.age = age; // note the use of this
+		this.amount = amount;
+
+		System.out.println("The name of our new customer is " + name + ". He is " + age + " years old."
+				+ " We lend him/her " + amount + " euros.");
+
+		loansSum += amount;
+		System.out.println("Sum of all the loans: " + loansSum + " Euros.");
+		System.out.println();
+		}
+	
+	public static Mortgage constructMortgage(String name, int age, double amount) {
+		if (loansSum + amount <= budget) {
+			return new Mortgage(name, age, amount);
+		}
+		System.out.println("The mortgage of " + name + " gets rejected because we are out of budget.");
+		System.out.println();
+		return null;
+	}
 }

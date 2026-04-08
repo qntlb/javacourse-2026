@@ -25,7 +25,7 @@ public class PrivateConstructorClass{
 	 */
 	public static PrivateConstructorClass createOneObject() {
 		if (howManyObjects < 1) {
-			howManyObjects ++;
+			howManyObjects++;
 			PrivateConstructorClass newObject = new PrivateConstructorClass();
 			//the constructor can of course be accessed from inside the class
 			return newObject;

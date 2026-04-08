@@ -20,5 +20,6 @@ public class MortgagesMain {
 		Mortgage thirdCustomer = Mortgage.constructMortgage("Bianchi", 19, 1.3E5);
 		Mortgage fourthCustomer = Mortgage.constructMortgage("Lopez", 37, 3.4E5);
 		Mortgage fifthCustomer = Mortgage.constructMortgage("Favre", 39, 2.1E5);
+		Mortgage sixtCustomer = Mortgage.constructMortgage("Sgarabottolo", 22, 1E4);
 	}
 }

@@ -19,12 +19,14 @@ public class ClientConstruct {
 		 * Then we can perform multiple calling.
 		 */
 		// TODO: initialize the client with the constructor with all the arguments
-//		Client schneider = Client.createNewClient("00011100").name("Schneider").advisor("Smith")
-//				.nationality("German").cityOfResidence("Munich").age(37).
-//				riskAversionIndex(0.4).sumInvested(1E4).hasInsurance(true);
-		Client schneider = Client.createNewClient("00011100").advisor("Smith")
+//		Client schneider = new Client("1", "Smith", "Schneider", "German", "Munich", 37, 1.5, 1E4, false);
+//		Client schneider = Client.createNewClient("000110100");
+		Client schneider = Client.createNewClient("00011100").name("Schneider").advisor("Smith")
 				.nationality("German").cityOfResidence("Munich").age(37).
-				riskAversionIndex(0.4).sumInvested(1E4).hasInsurance(true).name("Schneider"); // changing the order in the building pattern does not affect the final object
+				riskAversionIndex(0.4).sumInvested(1E4).hasInsurance(true);
+//		Client schneider = Client.createNewClient("00011100").advisor("Smith")
+//				.nationality("German").cityOfResidence("Munich").age(37).
+//				riskAversionIndex(0.4).sumInvested(1E4).hasInsurance(true).name("Schneider"); // changing the order in the building pattern does not affect the final object
 
 		schneider.printName();
 		schneider.printNationality();	

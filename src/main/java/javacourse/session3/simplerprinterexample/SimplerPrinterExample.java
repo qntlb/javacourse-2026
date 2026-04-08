@@ -9,7 +9,7 @@ import javacourse.session3.useful.Print;
  * that useful).
  */
 
-//import static javacourse.session3.useful.Print.printn;
+import static javacourse.session3.useful.Print.printn;
 
 
 /**
@@ -27,7 +27,7 @@ public class SimplerPrinterExample {
 		
 		Print.print("We can do that because we imported the relevant classes.");
 		
-//		Print.printn();
-//		printn("This message is printed by a method imported with import static");
+		Print.printn();
+		printn("This message is printed by a method imported with import static");
 	}
 }

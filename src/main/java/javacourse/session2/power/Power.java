@@ -22,7 +22,8 @@ public class Power {
 	 * @param exponent
 	 */
 	void computePower(double base, int exponent) {
-		// TODO: implement the method
+		result = Math.pow(base, exponent);
+		System.out.println("Computing " + base + " to the power of " + exponent + " using the simple method. The result is " + result);
 	}
 
 	/**
@@ -33,7 +34,13 @@ public class Power {
 	 * @param exponent
 	 */
 	void computePower(double base, double exponent) {
-		// TODO: implement the method
+		if (base >= 0 || exponent == Math.floor(exponent)) {
+			result = Math.pow(base, exponent);
+			System.out.println("Computing " + base + " to the power of " + exponent + " using the overloaded method. The result is " + result);
+		}
+		else {
+			System.out.println("The result is a complex number, is that what you want?");
+		}
 	}
 
 	

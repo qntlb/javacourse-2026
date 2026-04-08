@@ -27,6 +27,11 @@ public class Mortgage {
 				+ " We lend him/her " + amount + " euros.");
 
 		// TODO: complete the method to give a warning when the total amount loaned passes 1E6
-
+		loansSum += amount;
+		System.out.println("Up to now, we have lended " + loansSum + "Euros.");
+		
+		if (loansSum >= 1E6) {
+			System.out.println("We are going out of budget.");
+		}
 		}
 }

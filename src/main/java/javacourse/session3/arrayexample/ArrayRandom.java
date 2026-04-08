@@ -18,7 +18,7 @@ public class ArrayRandom {
 
 		int[] arrayToBeFilled = new int[length];
 		//or:
-		//int arrayToBeFilled[] = new int[length]; //the same
+//		int arrayToBeFilled[] = new int[length]; //the same
 		/*
 		 * Note that we have created an array reference (it is an object) and we have initialized
 		 * the array, through new int[length]. The array creation happens at run time
@@ -57,8 +57,8 @@ public class ArrayRandom {
 		System.out.println("secondArray is " + Arrays.toString(secondArray));
 		System.out.println();
 		firstArray[2]=7;//I modify firstArray. Note: firstArray[2] is the THIRD element of the array!
-//
-//		//arrays are not primitives! when we write firstArray = secondArray they have the same reference
+
+		//arrays are not primitives! when we write firstArray = secondArray they have the same reference
 		System.out.println("firstArray is now " + Arrays.toString(firstArray));
 		System.out.println("secondArray is now " + Arrays.toString(secondArray));
 		System.out.println();

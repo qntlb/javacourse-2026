@@ -6,6 +6,9 @@ package javacourse.session3.accesslevels;
  */
 class PackageAccessOnly {//this class is not public, but has package access: no public access modifier
 
+	PackageAccessOnly() {
+		System.out.println("A package access only class is created.");
+	}
 }
 /*
  * Look what happens when we try to construct objects of this class from

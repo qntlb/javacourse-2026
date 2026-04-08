@@ -20,10 +20,10 @@ public class AccessTestOutside {
 //		access.packageAccessMethod(); 
 //		access.privateMethod();
 		access.publicMethod();
-		//print(access.packageAccessField); // this field has package access! it is not possible to access it from here
+//		print(access.packageAccessField); // this field has package access! it is not possible to access it from here
 		print(access.publicField);
 		//this class has package access! it is not possible to construct new objects of the class from here
-		//PackageAccessOnly packageAccessOnly = new PackageAccessOnly();
+//		PackageAccessOnly packageAccessOnly = new PackageAccessOnly();
 	}
 
 }
