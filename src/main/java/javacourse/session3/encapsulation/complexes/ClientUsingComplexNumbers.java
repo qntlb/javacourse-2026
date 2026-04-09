@@ -12,6 +12,12 @@ public class ClientUsingComplexNumbers {
 
 		//note: we can not use the (private!) constructor
 		ComplexNumber complexNumber = ComplexNumber.setComplexNumber(3.0, 4.0);
+		System.out.println(complexNumber); //not that nice
+		System.out.println();
+		
+		// The complex number is created and its coordinate are stored as polar coordinates
+		// We can visualize the cartesian coordinates of the complex number using the getters
+		System.out.println("The real part of the complex number is " + complexNumber.getRealPart());
 
 		//prints
 		complexNumber.showWithNewLine();
@@ -39,7 +45,7 @@ public class ClientUsingComplexNumbers {
 		
 		ComplexNumber newComplexNumber = ComplexNumber.setComplexNumber(1.0, 2.0);
 		
-		//we compute and print the sum of the two complex numbers
+		// we compute and print the sum of the two complex numbers
 		print("The sum of ");
 		complexNumber.show();
 		print("and ");

@@ -29,4 +29,7 @@ public class TennisPlayer extends Sportsman {
 	 * TODO: write a constructor with no arguments. Note that this doesn't need to call super()
 	 * because the default constructor of the parent class is automatically called
 	 */
+	TennisPlayer() {
+		printn("In particular, I am a tennis player.");
+	}
 }

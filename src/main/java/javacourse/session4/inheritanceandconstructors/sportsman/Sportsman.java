@@ -22,4 +22,7 @@ public class Sportsman {
 	 * TODO: write a constructor with no arguments that can be called from the constructor
 	 * of the derived class without using "super".
 	 */
+	Sportsman() {
+		printn("I am a sportsman. My name is not important.");
+	}
 }

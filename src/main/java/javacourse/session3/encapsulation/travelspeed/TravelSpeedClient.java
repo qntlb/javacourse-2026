@@ -23,7 +23,7 @@ public class TravelSpeedClient {
 		printn("The distance travelled is " + myDistance);
 		
 		// with the setter we avoid the ambiguity arising from the following line of code:
-		//myTravel.distance = 40; //in km! not that nice for us
+		// myTravel.distance = 40; //in km! not that nice for us
 		
 		// with the getter we avoid the ambiguity arising from the following line of code:
 		// printn("The distance is " + myTravel.distance);

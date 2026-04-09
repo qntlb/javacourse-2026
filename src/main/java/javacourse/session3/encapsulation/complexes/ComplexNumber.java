@@ -24,7 +24,7 @@ public class ComplexNumber {
 	 * when we want to construct an object of this type (i.e., with polar coordinates) from the cartesian coordinates
 	 * the user gives.
 	 */
-	private  ComplexNumber(double r, double theta) { //Constructor for internal use
+	private ComplexNumber(double r, double theta) { //Constructor for internal use
 		this.r=r;
 		this.theta=theta;
 	}
@@ -45,6 +45,11 @@ public class ComplexNumber {
 	 * Look at the class with the main to have a hint about the input types.
 	 * The function Math.atan2 can be useful, look for the documentation to see how to use it.
 	 */
+	public static ComplexNumber setComplexNumber(double realPart, double imaginaryPart) {
+		double radius = Math.sqrt(realPart * realPart + imaginaryPart * imaginaryPart);
+		double angle = Math.atan2(imaginaryPart, realPart);
+		return new ComplexNumber(radius, angle);
+	}
 
 	/*
 	 * We translate from the polar coordinates of the object which is calling the method to cartesian ones
@@ -59,6 +64,9 @@ public class ComplexNumber {
 	/*
 	 * TODO: write the method getRealPart().
 	 */
+	public double getRealPart() {
+		return r * Math.cos(theta);
+	}
 
 	/**
 	 * It returns the imaginary part of a complex number
@@ -67,6 +75,9 @@ public class ComplexNumber {
 	/*
 	 * TODO: write the method getImaginaryPart().
 	 */
+	public double getImaginaryPart() {
+		return r * Math.sin(theta);
+	}
 
 
 	/*
@@ -76,11 +87,20 @@ public class ComplexNumber {
 	 * @return the absolute value of the complex number represented by the object calling the method
 	 */
 	// TODO: write the method abs()
+	public double abs() {
+		return r;
+	}
 	
 	/**
 	 * @return the conjugate of the complex number represented by the object calling the method
 	 */
 	// TODO: write the method conjugate() -> ComplexNumber
+	public ComplexNumber conjugate() {
+		ComplexNumber conjugate = new ComplexNumber(r, - theta);  
+		return conjugate;
+		// or, more compactly:
+		// return new ComplexNumber(r, - theta);
+	}
 
 	/*
 	 * summing complex numbers is still easier in cartesian coordinates
@@ -93,6 +113,24 @@ public class ComplexNumber {
 	/*
 	 * TODO: write the method sum(ComplexNumber complexNumber)
 	 */
+	public ComplexNumber sum(ComplexNumber complexNumber) {
+		double realPartThis = getRealPart();
+		double imaginaryPartThis = getImaginaryPart();
+		
+		double realPartOther = complexNumber.getRealPart();
+		double imaginaryPartOther = complexNumber.getImaginaryPart();
+		
+		double realPartSum = realPartThis + realPartOther;
+		double imaginaryPartSum = imaginaryPartThis + imaginaryPartOther;
+		
+		ComplexNumber sum = setComplexNumber(realPartSum, imaginaryPartSum);
+		return sum;
+	}
+	
+	// The method can be written in a more compact form:
+	public ComplexNumber sumCompact(ComplexNumber complexNumber) {
+		return setComplexNumber(getRealPart() + complexNumber.getRealPart(), getImaginaryPart() + complexNumber.getImaginaryPart());
+	}
 
 	/*
 	 * the product is more efficiently computed in polar coordinates.
@@ -104,6 +142,13 @@ public class ComplexNumber {
 	/*
 	 * TODO: write the method product(ComplexNumber complexNumber)
 	 */
+	public ComplexNumber product(ComplexNumber complexNumber) {
+		double radiusProduct = r * complexNumber.r;
+		double angleProduct = theta + complexNumber.theta;
+		
+		ComplexNumber product = new ComplexNumber(radiusProduct, angleProduct);
+		return product;
+	}
 
 	/*
 	 * it returns the sign of the imaginary part of the complex number represented by the object

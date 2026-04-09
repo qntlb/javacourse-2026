@@ -16,7 +16,7 @@ public class TestClass {
 		int seed = 1897;
 		int lastTime = 10;
 		int numberOfSimulations = 1000;
-		int simulationIndex = 10;
+		int simulationIndex = 9; // we use this to access a specific path
 
 		BinomialModelSimulator tester = new BinomialModelSimulator(initialValue, increaseIfUp, decreaseIfDown, interestRate, seed,
 				lastTime, numberOfSimulations);

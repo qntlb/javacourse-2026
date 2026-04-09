@@ -23,10 +23,16 @@ public class Gas {
 	 * TODO: write the private method kelvinToFahreneit recalling the formula
 	 * F = C * 9/5 + 32, where F is Fahreneit and C is celsius. Also remember that C = K - 273.15
 	 */
+	private double kelvinToFahreneit(double temperatureInKelvin) {
+		return (temperatureInKelvin - 273.15) * 9 / 5 + 32;
+	}
 
 	/*
 	 * TODO: write the private method fahreneitToKelvin
 	 */
+	private double fahreneitToKelvin(double temperatureInFahreneit) {
+		return (temperatureInFahreneit - 32) * 5 / 9 + 273.15;
+	}
 
 	/*
 	 * getter of the temperature: the conversion from Kelvin to Fahreneit has to be
@@ -34,6 +40,7 @@ public class Gas {
 	 */
 	public double getTemperature() {
 		// TODO: implement the method
+		return kelvinToFahreneit(temperatureKelvin);
 	}
 
 	/*
@@ -42,6 +49,8 @@ public class Gas {
 	 */
 	public void setTemperature(double temperature) {
 		// TODO: implement the method so that a message with the new temperature in Kelvin is printed
+		temperatureKelvin = fahreneitToKelvin(temperature);
+		System.out.println("The user set a temperature of " + temperatureKelvin + " Kelvin.");
 	}
 
 	// Calculates pressure- Gay Lussac Law. The temperature has to be in Kelvin

@@ -49,7 +49,7 @@ public class DerivedClass extends ParentClassOtherPackage {
 	 */
 	public void computeAndPrintSinOfHalf() {
 		// you can't call computeAndSetHalf() because it is not protected!
-		//computeAndSetHalf();
+//		computeAndSetHalf();
 		printn(Math.sin(i / 2.));
 	}
 }

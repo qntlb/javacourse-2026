@@ -56,12 +56,13 @@ public class BinomialModelSimulator {
 		this(initialValue, increaseIfUp, decreaseIfDown, 0, seed, lastTime, numberOfSimulations);
 	}
 
+	// overloaded constructor: if not specified, the seed is 1897
 	public BinomialModelSimulator(double initialValue, double increaseIfUp, double decreaseIfDown,
 			double interestRate, int lastTime, int numberOfSimulations) {
 		this(initialValue, increaseIfUp, decreaseIfDown, interestRate, 1897, lastTime, numberOfSimulations);
 	}
 	
-	// overloaded constructor: if not specified, the seed is 1897
+	// overloaded constructor: if not specified, the seed is 1897 and the interest rate is zero
 	public BinomialModelSimulator(double initialValue, double increaseIfUp, double decreaseIfDown, int lastTime,
 			int numberOfSimulations) {
 		this(initialValue, increaseIfUp, decreaseIfDown, 0, 1897, lastTime, numberOfSimulations);
@@ -72,7 +73,7 @@ public class BinomialModelSimulator {
 	 * random natural numbers: we map the probability on the range of the generated random numbers to define
 	 * a threshold for the movements up and down.
 	 */
-	private double convert() {
+	private double getThreshold() {
 		// modulus is private, but we have the getter
 		return riskNeutralProbabilityUp * (randomGenerator.getModulus() - 1);
 	}
@@ -85,7 +86,7 @@ public class BinomialModelSimulator {
 	private void generateUpsAndDowns() {
 		// rows are simulation at given time, columns paths
 		upsAndDowns = new double[lastTime][numberOfSimulations];
-		double threshold = convert();// if the simulated number is less than this, we set an increase up
+		double threshold = getThreshold();// if the simulated number is less than this, we set an increase up
 		// double for loop, time and simulations
 		for (int timeIndex = 0; timeIndex < lastTime; timeIndex++) {
 			for (int simulationIndex = 0; simulationIndex < numberOfSimulations; simulationIndex++) {

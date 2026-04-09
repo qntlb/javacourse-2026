@@ -14,7 +14,7 @@ public class TestConstructors {
 		
 		System.out.println();
 		
-		// TODO: add a default player with no name
+		TennisPlayer johnDoe = new TennisPlayer();
 
 	}
 }
