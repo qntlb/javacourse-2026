@@ -26,6 +26,13 @@ public class TestClass {
 		
 		System.out.println();
 		
+		// If we create a Toad, when we call action on it, we will get the overridden methods of Toad
+		Toad firstToad = new Toad();
+		System.out.println();
+		
+		Amphibian.action(firstToad);
+		
+		System.out.println();
 		
 		// we now create a Frog assigning the reference of an Amphibian
 		Amphibian secondFrog = new Frog();
@@ -54,10 +61,12 @@ public class TestClass {
 		/*
 		 * Calling public methods directly from the object, note the late binding effect
 		 */
+		System.out.println();
 		Amphibian anotherToad = new Toad();
 		
 		anotherToad.croaking();
 		
+		System.out.println();
 		Amphibian amphibian = new Amphibian();
 		
 		amphibian.croaking();

@@ -10,4 +10,13 @@ public interface Cure {
 	// these methods are implicitly public
 	void diagnose();
 	void heal();
+	
+	private static void privateMethod() {
+		System.out.println("Hey");
+	}
+	
+	static void staticMethod() {
+		System.out.println("I am a static method of the interface");
+		privateMethod();
+	}
 }

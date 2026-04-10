@@ -51,6 +51,15 @@ public class BinomialModelSimulator {
 	}
 
 	// overloaded constructor: if not specified, the interest rate is zero. Note the use of this!
+	/**
+	 * Constructor of the Binomial Model. Interest rate is automatically set to zero.
+	 * @param initialValue initial value of the stock
+	 * @param increaseIfUp u in the model
+	 * @param decreaseIfDown d in the model
+	 * @param seed seed for the generation of random numbers
+	 * @param lastTime ...
+	 * @param numberOfSimulations ...
+	 */
 	public BinomialModelSimulator(double initialValue, double increaseIfUp, double decreaseIfDown, int seed, int lastTime,
 			int numberOfSimulations) {
 		this(initialValue, increaseIfUp, decreaseIfDown, 0, seed, lastTime, numberOfSimulations);

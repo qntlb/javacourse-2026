@@ -29,7 +29,7 @@ public class CurrencyTester {
 		printn("The position of DOLLAR with respect to EURO: " + Currency.DOLLAR.compareTo(Currency.EURO));
 		printn("The position of DOLLAR with respect to YEN: " + Currency.DOLLAR.compareTo(Currency.YEN));
 	
-		printn("EURO is the same that DOLLAR: " + Currency.EURO.equals(Currency.DOLLAR));
+		printn("EURO is the same as DOLLAR: " + Currency.EURO.equals(Currency.DOLLAR));
 
 		printn();
 		/*

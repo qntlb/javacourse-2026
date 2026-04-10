@@ -16,7 +16,8 @@ public class TestClass {
 		int seed = 1897;
 		int lastTime = 10;
 		int numberOfSimulations = 1000;
-		int simulationIndex = 9; // we use this to access a specific path
+		int simulationIndex = 902; // we use this to access a specific path
+		int timeTestIndex = 10;
 
 		BinomialModelSimulator tester = new BinomialModelSimulator(initialValue, increaseIfUp, decreaseIfDown, interestRate, seed,
 				lastTime, numberOfSimulations);
@@ -27,14 +28,14 @@ public class TestClass {
 
 		System.out.println();
 		
-		double finalAverage = tester.getAverageAtGivenTime(lastTime);
+		double average = tester.getAverageAtGivenTime(timeTestIndex);
 
-		System.out.println("Average of the process at time " + lastTime + ": " + finalAverage);
+		System.out.println("Average of the process at time " + timeTestIndex + ": " + average);
 
 		System.out.println();
 		
-		double discountFactor = Math.pow(1 + interestRate, -lastTime);
-		double discountedAverage = discountFactor * finalAverage;
-		System.out.println("Average of the discounted process at time " + lastTime + ": " + discountedAverage);
+		double discountFactor = Math.pow(1 + interestRate, - timeTestIndex);
+		double discountedAverage = discountFactor * average;
+		System.out.println("Average of the discounted process at time " + timeTestIndex + ": " + discountedAverage);
 	}
 }

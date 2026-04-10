@@ -68,6 +68,9 @@ public class Warrior {
 		if (healthPoints <= 0) {
 			System.out.println("Dead");
 		}
+		else {
+			System.out.println("All good, the warrior is still alive");
+		}
 	}
 
 	/**

@@ -19,7 +19,7 @@ public class TestClass {
 		normalPhone.checkIfSmartphone();
 		printn();
 		printn();
-		//normalPhone.goOnInternet();//error! this is a method of the derived class only
+//		normalPhone.goOnInternet();//error! this is a method of the derived class only
 
 		printn("THEN THE DERIVED CLASS:");
 		printn();
@@ -54,6 +54,8 @@ public class TestClass {
 		anotherSmartphone.call();
 		printn();
 		anotherSmartphone.checkIfSmartphone();
-//		anotherSmartphone.goOnInternet(); // it cannot, however upcasting is possible
+		// anotherSmartphone.goOnInternet(); // it cannot, however downcasting is possible
+		printn();
+		((Smartphone) anotherSmartphone).goOnInternet();
 			}
 }
